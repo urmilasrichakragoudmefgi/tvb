@@ -1,16 +1,18 @@
 import pandas as pd
 
 class TVBCriteriaValidator:
+
     def __init__(self):
         self.min_funding = 1000000
         self.max_funding = 5000000
-        
+
     def validate(self, funding, region):
         if region.upper() == "USA":
             return False
         return self.min_funding <= funding <= self.max_funding
 
 class AutonomousDiscoveryEngine:
+
     def __init__(self):
         self.validator = TVBCriteriaValidator()
         self.data = [
@@ -29,7 +31,7 @@ class AutonomousDiscoveryEngine:
             {"Company Name": "Motion", "Sector/Industry": "Robotics / Humanoids-as-a-Service", "Operating Region / HQ": "Brussels, Belgium", "US Presence Status": "None (Benelux/Europe)", "Funding Raised ($ USD)": 2000000, "CEO / Co-Founder Name": "Alexander L.C. Stevens", "Verified Email": "alexander@motion-robotics.com"},
             {"Company Name": "Mimbly", "Sector/Industry": "CleanTech / IoT Water & Microplastic Filtration", "Operating Region / HQ": "Gothenburg, Sweden", "US Presence Status": "None (Nordics/Europe)", "Funding Raised ($ USD)": 3300000, "CEO / Co-Founder Name": "Isabella Palmgren", "Verified Email": "isabella@mimbly.se"},
             {"Company Name": "Gravity Gardens", "Sector/Industry": "AgriTech / Seed Activation BioPlatform", "Operating Region / HQ": "Amsterdam, Netherlands", "US Presence Status": "None (Europe)", "Funding Raised ($ USD)": 2800000, "CEO / Co-Founder Name": "Paulino Valdés", "Verified Email": "paulino@gravitygardens.ag"},
-            {"Company Name": "Grubel", "Sector/Industry": "LegalTech / Applied Adaptive AI", "Operating Region / HQ": "Munich, Germany", "US Presence Status": "None (Germany/Europe)", "Funding Raised ($ USD)": 3300000, "CEO / Co-Founder Name": "Reinhard Heckel", "Verified Email": "reinhard@grubel.ai"},
+            {"Company Name": "Grubel", "Sector/Industry": "LegalTech / Applied Adaptive AI", "Operating Region / HQ": "Munich, Germany", "US Presence Status": "None (Germany/Europe)", "Funding Raised ($ USD)": 3300000, "CEO / Co-Founder Name": "Reinhard Heckel", "Verified Email": "reinhard@grubel.ai"}, # Added missing comma here
             {"Company Name": "Edmund AI", "Sector/Industry": "Fintech / AI Risk", "Operating Region / HQ": "Bengaluru, India", "US Presence Status": "None (India)", "Funding Raised ($ USD)": 2000000, "CEO / Co-Founder Name": "Yash Kothari", "Verified Email": "yash@edmund.ai"},
             {"Company Name": "DDD Invoices", "Sector/Industry": "Fintech / E-Invoicing", "Operating Region / HQ": "Vilnius, Lithuania", "US Presence Status": "None (Baltics/Europe)", "Funding Raised ($ USD)": 1200000, "CEO / Co-Founder Name": "Luka Gubo", "Verified Email": "luka@dddinvoices.com"},
             {"Company Name": "Keep Converting", "Sector/Industry": "MarTech / Conversion AI", "Operating Region / HQ": "Paris, France", "US Presence Status": "None (Europe)", "Funding Raised ($ USD)": 1500000, "CEO / Co-Founder Name": "Guillaume Cagnon", "Verified Email": "guillaume@keepconverting.com"},
